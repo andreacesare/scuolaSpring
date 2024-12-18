@@ -15,7 +15,7 @@ public class Gita {
     private Integer id;
     private String nome;
     private LocalDate data;
-    @OneToOne
+    @OneToOne()
     @JoinColumn(name = "id_doc",referencedColumnName = "id_doc",unique = true)
     private Docente docente;
     @ManyToMany(mappedBy = "gite")
@@ -33,6 +33,9 @@ public class Gita {
     public void setClassi(List<Classe> classi){this.classi=classi;}
     public void aggiungiClasse(Classe classe){
         classi.add(classe);
+    }
+    public void removeClasse(Classe classe){
+        classi.remove(classe);
     }
 
     public String toString(){

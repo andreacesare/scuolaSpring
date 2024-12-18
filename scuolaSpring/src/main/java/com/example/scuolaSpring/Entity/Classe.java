@@ -13,7 +13,7 @@ public class Classe {
     @Column(name="id_classe")
     private Integer id;
     private String nome;
-    @OneToOne
+    @OneToOne()
     @JoinColumn(name="id_doc", referencedColumnName = "id_doc")
     private Docente docente;
     @ManyToMany()
@@ -30,6 +30,9 @@ public class Classe {
     public void setGite(ArrayList<Gita> gite) { this.gite = gite; }
     public void aggiungiGita(Gita gita) {
         gite.add(gita);
+    }
+    public void removeGita(Gita gita) {
+        gite.remove(gita);
     }
 
 

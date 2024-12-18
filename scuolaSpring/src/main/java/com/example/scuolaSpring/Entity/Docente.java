@@ -11,9 +11,9 @@ public class Docente {
     private Integer id;
     private String nome;
     private String cognome;
-    @OneToOne(mappedBy = "docente",cascade = CascadeType.ALL,orphanRemoval = true)
+    @OneToOne(mappedBy = "docente")
     private Classe classe;
-    @OneToOne(mappedBy = "docente",cascade = CascadeType.ALL,orphanRemoval = true)
+    @OneToOne(mappedBy = "docente")
     private Gita gita;
 
     public String getNome() {return nome;}

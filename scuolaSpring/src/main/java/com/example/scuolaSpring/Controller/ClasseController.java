@@ -30,5 +30,15 @@ public class ClasseController {
         return classeService.saveClasse(classeDTO);
     }
 
+    @PutMapping("/updateClasse/{id}")
+    public ClasseDTOstring updateClasse(@PathVariable("id") Integer id,@RequestBody ClasseDTO classeDTO) {
+        return classeService.updateClasse(id, classeDTO);
+    }
+
+    @DeleteMapping("/deleteClasse/{id}")
+    public ClasseDTOstring deleteClasse(@PathVariable("id") Integer id) {
+        return classeService.deleteClasse(id);
+    }
+
 
 }

@@ -1,9 +1,5 @@
+
 package com.example.scuolaSpring.DTO;
-
-import com.example.scuolaSpring.Entity.Docente;
-import com.example.scuolaSpring.Entity.Gita;
-import jakarta.persistence.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
