@@ -73,7 +73,6 @@ public class GitaService {
         if(gita.getClassi()!=null){
             for(Classe c:gita.getClassi()){
                 c.removeGita(gita);
-                c.getDocente().setClasse(null);
                 docenteRepository.save(c.getDocente());
                 classeRepository.save(c);
 
